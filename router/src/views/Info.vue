@@ -1,11 +1,18 @@
 <template>
   <div>
     <h3>Information, Nested Route component</h3>
+    Id:{{$route.params.id}}
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  // props: {
+  //   id: {
+  //     type: Number
+  //   }
+  // }
+}
 </script>
 
 <style>

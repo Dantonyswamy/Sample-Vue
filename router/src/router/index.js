@@ -33,7 +33,7 @@ const routes = [
     children: [ // nested routes
       // /profile/12/info
       {
-        path: '/info', // each child has its own component
+        path: '/:id/info', // each child has its own component
         name: 'Info',
         component: Info
       }

@@ -3,12 +3,12 @@
     <h1>This is an Profile page</h1>
     <h4>{{ $route.params.id }}</h4>
     <!-- to see the parameters set to the profile route -->
-    <router-link :to="{ name: 'Profile', params: { id: '456'}, query: {plan: 'private'}}">Another Route</router-link>
+    <router-link :to="{ name: 'Profile', params: { id: '456'}, query: {plan: 'private'}}">To Profile page</router-link>
     <br />
-    <button @click="gotoInfo">Need Info</button>
+    <button @click="gotoInfo">Nested Info-Programatic</button>
     <!-- <router-link :to="{ name: 'Info', params: { id: '3'}}">Info Route</router-link> -->
     <h5>{{$route.query}}</h5>  <!-- Query params, to pull info or put info in different routes -->
-    <router-view/>
+    <router-view :key="$route.path"/>
   </div>
 </template>
 
@@ -19,7 +19,7 @@
 export default {
   methods: {
     gotoInfo () {
-      this.$route.push({ name: 'Info', params: { id: '3' } })
+      this.$router.push({ name: 'Info', params: { id: '3' } })
     }
   },
   mounted () {
